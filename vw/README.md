@@ -4,6 +4,10 @@ This addon will automate much of the process of popping and looting voidwatch NM
 display with information on your current heavy metal pouches, pulse weapon convert behavior, and whether the
 addon is currently running.
 
+This addon tries to be smart about how it handles its settings:
+* It will start to relinquish items when you have 3 inventory spots left so that there is still room for a pulse weapon and heavy metal
+* If you have it set not to convert pulse weapons, but already have one in your inventory, it will still convert it
+* It will take all items from the chest at once if all of them are worth taking, even if you have `vw chest` set to `false`
 ## Loading the addon
 `lua load vw`
 
