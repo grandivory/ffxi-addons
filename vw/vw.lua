@@ -439,7 +439,7 @@ local function examine_box(id, data)
             end
         end
 
-        if (count == take_items or settings.take_chest) and available_inventory >= count and rare != count then
+        if (count == take_items or settings.take_chest) and available_inventory >= count and rare ~= count then
             -- Take the entire chest if:
             -- 1. We want to keep every item in the chest AND we have space for them all
             -- 2. settings.take_chest is true AND we have space for all items
@@ -596,3 +596,4 @@ windower.register_event('outgoing chunk', start_fight)
 windower.register_event('incoming chunk', examine_rift)
 windower.register_event('incoming chunk', observe_box_spawn)
 windower.register_event('incoming chunk', observe_rift_spawn)
+windower.register_event('load', show_status)
